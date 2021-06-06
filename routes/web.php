@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +16,7 @@ use App\Http\Controllers\PageController;
 
 Route::get('/', [PageController::class,'index'] );
     
-
+Route::resource('/blog', PostsController::class);
 
 
 Auth::routes();
